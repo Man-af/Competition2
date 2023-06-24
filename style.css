@@ -1,0 +1,71 @@
+.container{
+    display:flex;
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    flex-flow: row wrap;
+    background-color: black;
+    justify-content: space-between;     
+    padding:20px;
+}
+ 
+
+.anch{
+    text-decoration: none;
+    color:white;
+}
+
+
+.fitems{
+    display:flex;
+    gap:50px;
+    flex-direction:row;
+    color:white;
+    text-decoration:none;
+}
+
+.tables{
+    margin-left:400px;
+    background-color:aquamarine;
+    padding:50px;
+    padding-top: 10px;
+    margin-right:400px;
+    margin-top: 100px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  td {
+     padding: 16px;
+  }
+  
+  tr {
+    background-color: #eee;
+  }
+  
+
+  .register {
+    margin-left:400px;
+    margin-top: 100px;
+    background-color:cadetblue;
+    padding:50px;
+    margin-right:400px;
+    border-radius: 5px;
+  }
+
+  .btn{
+    padding:10px;
+    background-color:black;
+    color:white;
+    border-radius:5px;
+    width:100%;
+    }
+
+    * {
+        scroll-behavior: smooth;
+      }

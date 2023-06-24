@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <nav class="container">
+    <div class="fitems">
+        <a href="#" class="anch" >Library System</a>
+    </div>
+
+    <div class="fitems">
+        <a href="#books-table" class="anch">Books</a>
+        <a href="#registration-form" class="anch">Register</a>
+        <a href="#" class="anch">Contact US</a>
+        <a href="#" class="anch">Logout</a>
+    </div>
+ </nav>
+ 
+ 
+ <div class="tables">
+    <h1 style="margin-top:70px;">Books</h1>
+    <table id="books-table">
+        <tr>
+        <th>Book ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Availability</th>
+        </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="#">To Kill A Mockingbird</a>
+              <table>
+                <tr>
+                  <td>Publication date: 2000</td>
+                </tr>
+                <tr>
+                  <td>page Count: 250</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 123-4567890123</td>
+                </tr>
+              </table>
+            </td>
+            <td>Stephen King</td>
+            <td>Crime</td>
+            <td>Available</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="#">The Great Gatsby</a>
+              <table>
+                <tr>
+                  <td>Publication date: 2002</td>
+                </tr>
+                <tr>
+                  <td>page Count: 300</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 123-56789019</td>
+                </tr>
+              </table>
+            </td>
+            <td>J.K Rowling</td>
+            <td>Magic</td>
+            <td>Available</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="#">Nineteen Eighty-Four</a>
+              <table>
+                <tr>
+                  <td>Publication date: 2010</td>
+                </tr>
+                <tr>
+                  <td>page Count: 270</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 098-765432123</td>
+                </tr>
+              </table>
+            </td>
+            <td>William Shakespeare</td>
+            <td>Romantic</td>
+            <td>Available</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><a href="#">One Hundred Years Of Solitude</a>
+              <table>
+                <tr>
+                  <td>Publication date: 2001</td>
+                </tr>
+                <tr>
+                  <td>page Count: 370</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 890-765431234</td>
+                </tr>
+              </table>
+            </td>
+            <td>John Ronald</td>
+            <td>Thriller</td>
+            <td>Not Available</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><a href="#">Pride And Prejudice</a>
+              <table>
+                <tr>
+                  <td>Publication date: 1998</td>
+                </tr>
+                <tr>
+                  <td>page Count: 300</td>
+                </tr>
+                <tr>
+                  <td>ISBN: 786-098742356436</td>
+                </tr>
+              </table>
+            </td>
+            <td>Jane Austen</td>
+            <td>Comedy</td>
+            <td>Available</td>
+          </tr>
+        </table>
+ </div>
+
+
+ <div class="register">
+    <h1>Register</h1>
+    <form id="registration-form" action="/submit-form" method="POST">
+        <label for="text">First Name:</label ><br>
+        <input  style="width:100%;" type="text" name="text" id="text" placeholder="First Name"  required><br>
+
+        <label for="text">Last Name:</label ><br>
+        <input style="width:100%;" type="text" name="text1" id="text1" placeholder="Last Name"  required><br>
+
+        <label for="birthdate">Date of Birth:</label><br>
+        <input style="width:100%;" type="date" id="birthdate" name="birthdate" placeholder="24/01/1999" required><br>
+
+        <label for="age">Age:</label><br>
+        <input style="width:100%;" type="number" id="age" name="age" min="5" max="100" placeholder="5" required><br>
+
+        <label for="emailInput">Email:</label><br>
+        <input style="width:100%;" type="email" id="emailInput" name="emailInput" placeholder="manafmohd720@gamil.com" required><br>
+
+        <label for="password">Password:</label><br>
+        <input style="width:100%;" type="password" id="password" name="password" placeholder="****" required><br>
+
+        <label for="confirmPassword">Confirm Password:</label><br>
+        <input style="width:100%;" type="password" id="confirmPassword" name="confirmPassword" placeholder="****" required oninput="checkPasswordMatch()"><br>
+        <p id="passwordMatchMessage"></p><br>
+
+        <button class="btn">Register</button>
+    </form>
+ </div>
+
+ <script>
+    function checkPasswordMatch() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var message = document.getElementById("passwordMatchMessage");
+    
+      if (password === confirmPassword) {
+        message.textContent = "Passwords match!";
+      } else {
+        message.textContent = "Passwords do not match!";
+      }
+    }
+  </script>
+
+</body>
+</html>
